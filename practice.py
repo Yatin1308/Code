@@ -29,3 +29,26 @@ employee = {'Yatin': 'Engineer', 'Sahil': 'Plumber', 'Prateek': 'Sweeper'}
 
 for key, value in employee.items():
     print(key, value)
+
+
+# to remove dupolicates from a list
+mylist = [1, 3, 3, 4, 4, 6, 7, 2]  # it will not sort the output
+mylist = list(dict.fromkeys(mylist))
+print(mylist)
+
+mylist = [1, 3, 3, 4, 4, 6, 7, 2]  # it will sort the output
+mylist = list(set(mylist))
+print(mylist)
+
+# second way to remove duplicates from a list
+ints_list = [1, 4, 3, 4, 3, 2]
+
+temp = []
+
+for x in ints_list:
+    if x not in temp:
+        temp.append(x)
+
+ints_list = temp
+
+print(f'Updated List after removing duplicates = {temp}')
